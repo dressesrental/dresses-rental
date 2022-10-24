@@ -1,2 +1,2 @@
-# TinyURL
-run on http://localhost:8000/
+# web site for event dresses rental
+run on http://localhost:8080/
