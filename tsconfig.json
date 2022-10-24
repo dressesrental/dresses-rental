@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "jsx": "react",
+      "rootDir": "./server/src",
+      "moduleResolution": "node",
+      "outDir": "./server/dist",
+      "esModuleInterop": true,
+      "strict": true,
+      "baseUrl": "src",
+      "paths": {
+      }
+    },
+    "exclude": ["./node_modules"]
+  }
