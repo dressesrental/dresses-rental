@@ -10,4 +10,4 @@ function mongoDBConnection(URL?: string): void {
   })
 };
 
-export default mongoDBConnection;
+export default mongoDBConnection
