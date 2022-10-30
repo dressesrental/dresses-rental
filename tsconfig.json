@@ -1,14 +1,12 @@
 {
-  "compilerOptions": {
-    "jsx": "react",
-    "rootDir": "./server/src",
-    "moduleResolution": "node",
-    "outDir": "server/dist",
-    "esModuleInterop": true,
-    "strict": true,
-  },
-  "exclude": [
-    "./node_modules"
-  ],
-  "extends": "./tsconfig.paths.json"
-}
+    "compilerOptions": {
+      "jsx": "react",
+      "rootDir": "./server/src",
+      "moduleResolution": "node",
+      "outDir": "./server/dist",
+      "esModuleInterop": true,
+      "strict": true,
+    },
+    "exclude": ["./node_modules"],
+    "extends": "./tsconfig.paths.json"
+  }

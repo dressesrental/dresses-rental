@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import express, { Application } from 'express';
 
 
-function createApp(port?: string): Application {
+function createBAsicAppWithExpress(port?: string): Application {
   const app: Application = express();
   app.use(cors());
   app.use(bodyParser.json());
@@ -20,4 +20,4 @@ function createApp(port?: string): Application {
 
   return app
 };
-export default createApp;
+export default createBAsicAppWithExpress;
