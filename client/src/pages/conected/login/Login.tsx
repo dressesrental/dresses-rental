@@ -1,7 +1,7 @@
 import { Box, Button, Container, CssBaseline, Grid, Link, TextField, ThemeProvider, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ILoginDetails } from "../../types/types";
+import { ILoginDetails } from "../../../types/types";
 import useStyles from './Login.styles';
 export const Login = () => {
 

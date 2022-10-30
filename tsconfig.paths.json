@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./server/src",
+   "paths": {
+        "@app/*": ["/*"],
+        "@APIConfiguration": ["API-configuration/index"]
+      }
+  }
+}

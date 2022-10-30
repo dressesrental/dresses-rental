@@ -9,9 +9,15 @@ function createApp(port?: string): Application {
   app.use(cors());
   app.use(bodyParser.json());
   app.use(express.json());
+  app.get('/', (req, res) => {
+    res.send("App run")
+  }) 
+
   const PORT = port || process.env.PORT || "8000";
-  app.listen(PORT);
- 
+  app.listen(PORT, () => {
+    console.log(`app run on http://localhost:${PORT}`);
+  });
+
   return app
 };
 export default createApp;

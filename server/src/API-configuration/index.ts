@@ -1,4 +1,4 @@
 import createBAsicAppWithExpress from './express'
 import mongoDBConnection from './mongo'
-
-export { createBAsicAppWithExpress, mongoDBConnection }
+const x = 5
+export { createBAsicAppWithExpress, mongoDBConnection , x}
