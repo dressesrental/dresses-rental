@@ -1,5 +1,5 @@
-import { TopNav } from "./topNav/TopNav"
+import { NotFound } from "./notFound/notFound";
 
 export {
-    TopNav
+    NotFound
 }

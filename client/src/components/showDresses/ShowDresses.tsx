@@ -1,7 +1,5 @@
 import React from "react";
-import { TopNav } from "../../topNav/TopNav";
 import ss from '../../icons/ss.jpg';
-import { SingleDress } from "./SingleDress";
 
 export const ShowDresses = () => {
 
@@ -13,7 +11,6 @@ export const ShowDresses = () => {
     ]
     return (
         <>
-            <TopNav />
             <p>showDresses</p>
 
             {/* {dresses &&
