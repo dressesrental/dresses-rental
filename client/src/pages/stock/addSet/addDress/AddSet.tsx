@@ -1,8 +1,8 @@
+import { SingleDress } from '@components/showDresses/SingleDress';
 import { Checkbox } from '@mui/material';
 import react, { useState } from 'react';
 import { ISetDresses } from '../../../../types/types';
-import { SingleDress } from '../../../dresses/showDresses/SingleDress';
-// import ss from '../../../../icons/ss.jpg';
+
 
 export const AddSet=()=>{
 
