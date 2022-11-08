@@ -1,7 +1,7 @@
-import { TopNav } from "./topNav/TopNav"
+import { Menu } from "./menu/menu"
 import { ShowDresses } from "./showDresses/ShowDresses"
 
 export{
-    TopNav,
+    Menu,
     ShowDresses
 }

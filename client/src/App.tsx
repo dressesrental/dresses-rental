@@ -1,12 +1,15 @@
+import { MUIRLT } from '@app/MUIRLT';
 import { AppRouter } from '@appRouter';
-import { Outlet } from 'react-router-dom';
+import { AddSet } from '@pages/stock';
 import './App.css';
 
 function App() {
 
   return (
     <div className="App">
-      <AppRouter />
+      <MUIRLT>
+        <AppRouter />
+      </MUIRLT> 
     </div>
   );
 }
