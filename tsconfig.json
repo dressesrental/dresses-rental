@@ -5,7 +5,7 @@
       "moduleResolution": "node",
       "outDir": "./server/dist",
       "esModuleInterop": true,
-      "strict": true,
+      "strict": true
     },
     "exclude": ["./node_modules"],
     "extends": "./tsconfig.paths.json"

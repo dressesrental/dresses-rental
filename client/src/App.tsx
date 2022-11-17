@@ -6,6 +6,7 @@ import { AddOrder } from './pages/addOrder/AddOrder';
 // import { ShowDresses } from '@/pages/dresses';
 import { ShowDresses } from './pages/dresses';
 import { TopNav } from '@pages/index';
+import { AddUser } from '@pages/users/addUser/AddUser';
 
 
 
@@ -19,7 +20,8 @@ function App() {
     <div className="App">
       <TopNav />
       <Routes>
-        <Route path='/' element={<Login />}></Route>
+        {/* <Route path='/' element={<Login />}></Route> */}
+        <Route path='/addUser' element={<AddUser/>}/>
         <Route path='/showDresses' element={<ShowDresses />}></Route>
         <Route path='/addOrder' element={<AddOrder/>}></Route>
       </Routes>

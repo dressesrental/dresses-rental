@@ -11,10 +11,11 @@ export const AddOrder = () => {
             eventDate: new Date(Date.now()),
             amountPaid: 0,
             idEmployeeMadeOrder: 0,
-            comments: []
+            comments: [],
+            idCustomer: "",
         }
     );
-    const [addSet,setAddSet]= useState(false);
+    const [addSet, setAddSet] = useState(false);
     const [dresses, setDresses] = useState<ISetDresses>();
 
     const handleSubmit = () => {
@@ -29,10 +30,19 @@ export const AddOrder = () => {
             <Box component="form" onSubmit={handleSubmit} noValidate >
                 <TextField
                     type="text"
+                    defaultValue="טלפון לקוח"
                     onChange={(e) => setOrder({ ...order, customerName: e.target.value })}
                 />
+
                 <TextField
+                    id="date"
+                    label="תאריך ארוע"
                     type="date"
+                    defaultValue={order.orderDate}
+                    sx={{ width: 220 }}
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
                     onChange={(e) => setOrder({ ...order, eventDate: e.target.value as unknown as Date })}
                 />
                 <Button onClick={addASet}>הוספת סט</Button>

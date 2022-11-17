@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./server/src",
    "paths": {
+  //  "@log": ["../../loglevel.d.ts"],
         "@app/*": ["/*"],
         "@APIConfiguration": ["utils/API-configuration/index"]
       }

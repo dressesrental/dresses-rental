@@ -13,7 +13,7 @@ export interface ISetDresses {
 }
 export interface IOrderDetails {
     id?: string;
-    idCustomer?: Number;
+    idCustomer?: String;
     customerName?: string;
     orderDate?: Date;
     eventDate?: Date;
@@ -34,4 +34,15 @@ export interface IDress {
 }
 
 export type ITargetAudience = "GIRLS" | "TEANS" | "WOMENS";
+export interface IAdress{
+    city:string;
+    street:string;
+}
 
+export interface IUserDetails{
+  id?:string;
+  name?: string;
+  phoneNumber?: string;
+  email?:string;
+  adress?:IAdress
+}
