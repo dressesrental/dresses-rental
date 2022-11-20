@@ -97,6 +97,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Link,Chip,IconButton } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { AddUser } from '@pages/users/addUser/AddUser';
 
 
 export const  Login=() =>{
@@ -136,6 +137,7 @@ export const  Login=() =>{
         </DialogActions>
         <Link />
       </Dialog>
+      <AddUser />
     </div>
   );
 }

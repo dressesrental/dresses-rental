@@ -1,6 +1,8 @@
 import User, { IUser } from "models/user.model";
+import { log } from "node:console";
 
 export const getAllUsers = async () => {
+  log('getUsers')
   return User.find({});
 };
 export const createUser = async (user: IUser) => {
@@ -14,5 +16,7 @@ export const createUser = async (user: IUser) => {
   }
 };
 export const getUserByPhoneNumber = async (phoneNumber: string) => {
-  return User.findOne({ phoneNumber1: { phoneNumber } });
+  console.log('getbynumSer '+phoneNumber);
+  debugger
+    return await User.findOne({ phoneNumber1: phoneNumber });
 };

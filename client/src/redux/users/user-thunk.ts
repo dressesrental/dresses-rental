@@ -1,4 +1,4 @@
-import { getUsersApi } from "api/usres.api";
+import { addUserApi, getUsersApi } from "../../api/usres.api";
 import axios from "axios";
 import { AppDispatch } from "redux/store";
 import { IUserDetails } from "types/types";
@@ -18,5 +18,16 @@ export const getAllUsers = () => {
         return "An unexpected error occurred";
       }
     }
-  };
+  }
 };
+
+export const addUserThunk=(user:IUserDetails)=>{
+  return async (dispatch: AppDispatch)=>{
+    try{
+       const userAdd= await addUserApi(user);
+    }
+    catch{
+
+    }
+  }
+}

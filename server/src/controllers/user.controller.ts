@@ -6,6 +6,7 @@ import {
   getUserByPhoneNumber,
 } from "services/user.service";
 import { info } from "console";
+import { IUserDetails } from "../../../client/src/types/types";
 
 export const createUserController = async (req: Request, res: Response) => {
   try {
@@ -19,6 +20,8 @@ export const createUserController = async (req: Request, res: Response) => {
 };
 
 export const getUsersController = async (req: Request, res: Response) => {
+  console.log('getAllUsersController');
+  
   const users = await getAllUsers();
   log.info(users);
   if (!users) {
@@ -28,11 +31,14 @@ export const getUsersController = async (req: Request, res: Response) => {
 };
 
 export const getUserByPhoneNumberController = async (
-  req: Request,
+  req: Request<IUserDetails>,
   res: Response
 ) => {
-  const { phoneNumber } = req.params;
-  const user = await getUserByPhoneNumber(phoneNumber);
+
+  const phoneNumber = req.params.phoneNumber1;
+  console.log('getbynumcont'+phoneNumber+'getdddd '+`${phoneNumber}`+'fff'+ {phoneNumber} +'jjj  ');
+  debugger
+  const user  = await getUserByPhoneNumber(`${phoneNumber}`);
   if (!user) {
     return res.sendStatus(404);
   }

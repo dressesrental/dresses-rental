@@ -40,9 +40,10 @@ export interface IAdress{
 }
 
 export interface IUserDetails{
-  id?:string;
-  name?: string;
-  phoneNumber?: string;
-  email?:string;
-  adress?:IAdress
-}
+    _id?:string;
+    name?: string;
+    phoneNumber1?: string;
+    phoneNumber2?: string;
+    email?:string;
+    adress?:IAdress
+  }
