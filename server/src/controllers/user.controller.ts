@@ -32,15 +32,17 @@ export const getUsersController = async (req: Request, res: Response) => {
 
 export const getUserByPhoneNumberController = async (
   req: Request<IUserDetails>,
-  res: Response
+  res: Response<IUserDetails>
 ) => {
 
   const phoneNumber = req.params.phoneNumber1;
   console.log('getbynumcont'+phoneNumber+'getdddd '+`${phoneNumber}`+'fff'+ {phoneNumber} +'jjj  ');
   debugger
-  const user  = await getUserByPhoneNumber(`${phoneNumber}`);
+  const user:IUserDetails|any  = await getUserByPhoneNumber(`${phoneNumber}`);
   if (!user) {
     return res.sendStatus(404);
   }
+  if(user) 
   return res.status(200).send(user);
 };
+    

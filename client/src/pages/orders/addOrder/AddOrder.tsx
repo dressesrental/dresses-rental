@@ -11,7 +11,7 @@ export const AddOrder = () => {
     //         amountPaid: 0,
     //         idEmployeeMadeOrder: 0,
     //         comments: [],
-            idCustomer: "",
+        //    idCustomer: "",
     //     }
     // );
     // const [addSet, setAddSet] = useState(false);
