@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { ObjectId, Schema } from "mongoose";
 
 export interface IAdress {
   city?: string;
@@ -11,7 +11,7 @@ export interface IUser {
   name?: string;
   phoneNumber1?: string;
   phoneNumber2?: string;
-  adress?: IAdress;
+  adress?: ObjectId;
   email?: string;
 }
 const AdressSchema: Schema<IAdress> = new mongoose.Schema({
@@ -25,7 +25,7 @@ const UserSchema: Schema<IUser> = new mongoose.Schema({
   name: { type: String },
   phoneNumber1: { type: String },
   phoneNumber2: { type: String },
-  adress: { type: Schema.Types.ObjectId, ref: "Adress" },
+  adress: { type: AdressSchema },
   email: { type: String },
 });
 

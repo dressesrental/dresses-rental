@@ -8,6 +8,7 @@ import { Login } from './pages/conected/login/Login';
 // import { ShowDresses } from '@/pages/dresses';;
 //import { TopNav } from '@pages/index';
 import { AddUser } from '@pages/users/addUser/AddUser';
+import { TopNav } from '@pages/topNav/TopNav';
 
 
 
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <TopNav /> */}
+      <TopNav />
       <Routes>
         {/* <Route path='/' element={<Login />}></Route> */}
         <Route path='/addUser' element={<AddUser/>}/>

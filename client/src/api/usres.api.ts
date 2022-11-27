@@ -9,3 +9,7 @@ export const getUsersApi = async () => {
 export const addUserApi= async (user:IUserDetails) => {
 return await axios.post<IUserDetails>(`${USERS_URL}/add`,user)
 }
+
+export const getUserByPhoneApi=(phone:string)=>{
+    return axios.get<IUserDetails>(`${USERS_URL}/${phone}`)
+}

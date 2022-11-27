@@ -6,11 +6,11 @@ import { Login } from '@pages/conected/login/Login';
 
 export const TopNav = () => {
     const navigate = useNavigate();
-    const [login,setLogin] =useState<boolean>(false);
+    // const [login,setLogin] =useState<boolean>(false);
 
-    const loginFalse=(p:boolean)=>{
-        setLogin(p);
-    }
+    // const loginFalse=(p:boolean)=>{
+    //     setLogin(p);
+    // }
     return (
         <>
             <p>topNav</p>

@@ -4,8 +4,9 @@ import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux";
 import { RootState } from "redux/store";
-import { getAllUsers } from "../../../redux/users/user-thunk";
+
 import { IUserDetails } from "types/types"
+import { getAllUsers } from "../../../service/users.service";
 
 export const AddUser=()=>{
     const dispatch=useAppDispatch();

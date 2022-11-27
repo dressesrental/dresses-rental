@@ -20,8 +20,6 @@ export const createUserController = async (req: Request, res: Response) => {
 };
 
 export const getUsersController = async (req: Request, res: Response) => {
-  console.log('getAllUsersController');
-  
   const users = await getAllUsers();
   log.info(users);
   if (!users) {
@@ -34,10 +32,8 @@ export const getUserByPhoneNumberController = async (
   req: Request<IUserDetails>,
   res: Response<IUserDetails>
 ) => {
-
+  console.log('byPhoncontroller')
   const phoneNumber = req.params.phoneNumber1;
-  console.log('getbynumcont'+phoneNumber+'getdddd '+`${phoneNumber}`+'fff'+ {phoneNumber} +'jjj  ');
-  debugger
   const user:IUserDetails|any  = await getUserByPhoneNumber(`${phoneNumber}`);
   if (!user) {
     return res.sendStatus(404);
