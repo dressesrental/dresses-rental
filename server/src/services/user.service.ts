@@ -16,7 +16,6 @@ export const createUser = async (user: IUser) => {
   }
 };
 export const getUserByPhoneNumber = async (phoneNumber: string) => {
-  console.log('getbynumSer '+{phoneNumber});
-  debugger
+    console.log('getbynumSer '+`${phoneNumber}`);
     return await User.findOne({ phoneNumber1: phoneNumber });
 };
