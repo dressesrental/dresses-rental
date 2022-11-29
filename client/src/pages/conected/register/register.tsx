@@ -1,5 +1,8 @@
+import useStyles from "./register.styles"
+
 export const Register = () => {
-return (
-    <div></div>
-)
+    const classes=useStyles();
+    return (
+        <></>
+    )
 }

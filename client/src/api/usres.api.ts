@@ -11,5 +11,5 @@ return await axios.post<IUserDetails>(`${USERS_URL}/add`,user)
 }
 
 export const getUserByPhoneApi=(phone:string)=>{
-    return axios.get<IUserDetails>(`${USERS_URL}/${phone}`)
+    return axios.get<IUserDetails>(`${USERS_URL}/getByPhoneNumber/${phone}`)
 }

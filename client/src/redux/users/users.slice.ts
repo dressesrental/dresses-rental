@@ -17,7 +17,9 @@ export const usersSlice = createSlice({
     getUsers: (state, action: PayloadAction<IUserDetails[]>) => {
       state.users = action.payload;
     },
-    getUserByPhoneNumber: () => {},
+    getUserByPhoneNumber: (state,action:PayloadAction<IUserDetails>) => {
+   state.currentUser=action.payload;
+    },
     addUser: (state, action: PayloadAction<IUserDetails>) => {
       state.users.push(action.payload);
     },
@@ -28,5 +30,5 @@ export const usersSlice = createSlice({
   },
 });
 
-export const { getUsers, addUser, setCurrentUser } = usersSlice.actions;
+export const { getUsers, addUser, setCurrentUser,getUserByPhoneNumber } = usersSlice.actions;
 export default usersSlice.reducer;
