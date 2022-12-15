@@ -2,10 +2,10 @@ import log from "loglevel";
 import { Request, Response } from "express";
 import {
   createUser,
+  editUser,
   getAllUsers,
   getUserByPhoneNumber,
 } from "services/user.service";
-import { info } from "console";
 import { IUserDetails } from "../../../client/src/types/types";
 
 export const createUserController = async (req: Request, res: Response) => {
@@ -31,17 +31,29 @@ export const getUsersController = async (req: Request, res: Response) => {
 export const getUserByPhoneNumberController = async (
   req: Request<reqT>,
   res: Response<IUserDetails>
-)  => {
-  console.log('byPhoncontroller')
+) => {
+  console.log("byPhoncontroller");
   const phoneNumber = req.params.phoneNumber1;
-  const user:IUserDetails|any  = await getUserByPhoneNumber(`${phoneNumber}`);
+  const user: IUserDetails | any = await getUserByPhoneNumber(`${phoneNumber}`);
   if (!user) {
-     res.sendStatus(404);
+    res.sendStatus(404);
   }
-  if(user) 
-   res.status(200).send(user);
+  if (user) res.status(200).send(user);
 };
-    
-interface reqT{
-  phoneNumber1:string
+
+export const editUserController = async (req: Request, res: Response) => {
+  console.log("edit-user-controller");
+  try {
+    const user: IUserDetails | any = await editUser(req.body);
+    console.log({ ...user });
+    return res.status(201).send(user);
+  } catch (error: any) {
+    log.error(error.message);
+    console.log("error user" + error.message);
+    return res.status(409).send(error.message);
+  }
+};
+
+interface reqT {
+  phoneNumber1: string;
 }

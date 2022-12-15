@@ -5,18 +5,19 @@ import { Home } from "@pages/home"
 import { OrdersRouter } from "./orders.router"
 import { UsersRouter } from "./users.roter"
 import { NotFound } from "@pages/index"
-import { StockRouter } from "./stock.router"
+import { CollectionRouter } from "./collection.router"
 
 export const MenuRouter = () => {
-    return (<Routes >
-        <Route element={<Menu />}>
-            <Route index element={<Home />} />
-            <Route path="register" element={<Register />} />
-            <Route path="login" element={<Login />} />
-            <Route path="/orders/*" element={<OrdersRouter />} />
-            <Route path="users/*" element={<UsersRouter />} />
-            <Route path="stock/*" element={<StockRouter />} />
-        </Route>
-    </Routes>
+    return (
+        <Routes >
+            <Route element={<Menu />}>
+                <Route index element={<Home />} />
+                <Route path="register" element={<Register />} />
+                <Route path="login" element={<Login />} />
+                <Route path="orders/*" element={<OrdersRouter />} />
+                <Route path="users/*" element={<UsersRouter />} />
+                <Route path="collections/*" element={<CollectionRouter />} />
+            </Route>
+        </Routes>
     )
 }

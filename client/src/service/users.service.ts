@@ -28,7 +28,7 @@ export const getAllUsers = () => {
 export const addUserServ = (user: IUserDetails) => {
   return async (dispatch: AppDispatch) => {
     try {
-      const userAdd: IUserDetails | any = await addUserApi(user);
+      const userAdd: IUserDetails | any = await (await addUserApi(user)).data;
       dispatch(addUser(userAdd));
     } catch (error) {
       if (axios.isAxiosError(error)) {

@@ -34,9 +34,12 @@ export interface IDress {
 }
 
 export type ITargetAudience = "GIRLS" | "TEANS" | "WOMENS";
+
+export type IMode = "MANAGER" | "EMPLOYEE" | "NON";
 export interface IAdress{
     city:string;
     street:string;
+    number:number;
 }
 
 export interface IUserDetails{
